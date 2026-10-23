@@ -43,14 +43,14 @@ export default function ProductCard({ product, onAddToCart, onQuickView }) {
 
           {/* Floating Discount Tag in Warm Yellow */}
           {originalPrice > currentPrice && !isOutOfStock && (
-            <span className="absolute top-1.5 right-1.5 sm:top-2.5 sm:right-2.5 z-10 text-[8px] sm:text-[10px] font-extrabold text-[#183B25] bg-[#FABD44] px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full shadow-xs">
+            <span className="absolute bottom-1.5 right-1.5 sm:top-2.5 sm:right-2.5 z-10 text-[8px] sm:text-[10px] font-extrabold text-[#183B25] bg-[#FABD44] px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full shadow-xs border border-[#FABD44]/40">
               Save ₹{originalPrice - currentPrice}
             </span>
           )}
 
           {/* Out of Stock Floating Badge */}
           {isOutOfStock && (
-            <span className="absolute top-1.5 right-1.5 sm:top-2.5 sm:right-2.5 z-10 text-[8px] sm:text-[10px] font-extrabold text-white bg-red-600 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full shadow-xs">
+            <span className="absolute bottom-1.5 right-1.5 sm:top-2.5 sm:right-2.5 z-10 text-[8px] sm:text-[10px] font-extrabold text-white bg-red-600 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full shadow-xs">
               Out of Stock
             </span>
           )}

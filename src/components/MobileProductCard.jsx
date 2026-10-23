@@ -35,15 +35,15 @@ export default function MobileProductCard({ product, onAddToCart, onQuickView })
           className="relative w-full aspect-square max-h-36 rounded-xl bg-gradient-to-b from-[#FAF8F5] to-white p-2 flex items-center justify-center overflow-hidden border border-[#F0EBE0] cursor-pointer mb-2"
         >
           {/* Floating Small Tag */}
-          <span className={`absolute top-1.5 left-1.5 z-10 text-[8px] font-extrabold uppercase tracking-wider px-1.5 py-0.5 rounded-md shadow-2xs ${
-            product.tagColor || 'bg-[#183B25] text-white'
+          <span className={`absolute top-1.5 left-1.5 z-10 text-[8px] font-extrabold uppercase tracking-wider px-1.5 py-0.5 rounded-md shadow-2xs max-w-[80%] truncate ${
+            product.tagColor || 'bg-[#183B25] text-[#FABD44]'
           }`}>
-            {product.tag || 'Traditional'}
+            ★ {product.tag || 'Traditional'}
           </span>
 
-          {/* Floating Discount Tag */}
+          {/* Floating Discount Tag (Placed at Bottom-Right so it never overlaps the tag) */}
           {originalPrice > currentPrice && (
-            <span className="absolute top-1.5 right-1.5 z-10 text-[8px] font-bold text-[#DC2626] bg-white/95 px-1.5 py-0.5 rounded-md border border-red-100 shadow-2xs">
+            <span className="absolute bottom-1.5 right-1.5 z-10 text-[8px] font-extrabold text-[#183B25] bg-[#FABD44] px-1.5 py-0.5 rounded-md shadow-2xs border border-[#FABD44]/50">
               Save ₹{originalPrice - currentPrice}
             </span>
           )}
@@ -57,11 +57,11 @@ export default function MobileProductCard({ product, onAddToCart, onQuickView })
           />
         </div>
 
-        {/* Info Section - Clean, Compact, Absolutely NO '...' ellipsis */}
+        {/* Info Section - Clean, Compact, Aligned */}
         <div className="space-y-1">
           {/* Category & Star Rating */}
           <div className="flex items-center justify-between gap-1">
-            <span className="text-[9px] font-bold text-[#BA7A18] uppercase tracking-wider">
+            <span className="text-[9px] font-bold text-[#BA7A18] uppercase tracking-wider truncate flex-1">
               {product.category || 'Traditional'}
             </span>
             <div className="flex items-center gap-0.5 text-[10px] font-bold text-[#183B25] shrink-0">
@@ -70,17 +70,17 @@ export default function MobileProductCard({ product, onAddToCart, onQuickView })
             </div>
           </div>
 
-          {/* Full Product Name - Complete text, NO '...' truncation */}
+          {/* Full Product Name - Consistent 2-line height for perfect grid alignment */}
           <h3 
             onClick={() => onQuickView(product)}
-            className="font-serif text-xs font-bold text-[#183B25] group-hover:text-[#DEA02C] transition-colors leading-snug cursor-pointer break-words"
+            className="font-serif text-xs font-bold text-[#183B25] group-hover:text-[#DEA02C] transition-colors leading-snug cursor-pointer line-clamp-2 min-h-[2.1rem]"
             title={product.name}
           >
             {product.name}
           </h3>
 
-          {/* Weight Options / Pack Badge (No truncation) */}
-          <div className="pt-0.5 flex items-center gap-1 flex-wrap">
+          {/* Weight Options / Pack Badge (Aligned height) */}
+          <div className="pt-0.5 flex items-center gap-1 flex-wrap min-h-[1.5rem]">
             {product.weightOptions && product.weightOptions.length > 1 ? (
               product.weightOptions.map((wt) => (
                 <button
@@ -90,7 +90,7 @@ export default function MobileProductCard({ product, onAddToCart, onQuickView })
                     e.stopPropagation();
                     setSelectedWeight(wt);
                   }}
-                  className={`text-[9px] px-1.5 py-0.5 rounded font-bold transition-all ${
+                  className={`text-[9px] px-1.5 py-0.5 rounded font-bold transition-all cursor-pointer ${
                     selectedWeight === wt
                       ? 'bg-[#183B25] text-white'
                       : 'bg-[#FAF7EE] text-[#183B25]/80 border border-[#E8E2D5]'
