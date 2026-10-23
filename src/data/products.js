@@ -1,0 +1,553 @@
+export const initialProducts = [
+  {
+    id: "esan-men",
+    name: "Men's Health Mix",
+    tamilName: "ஆண்கள் நலம் சத்து மாவு",
+    category: "Traditional Health Mixes",
+    price: 180,
+    originalPrice: 200,
+    rating: 4.9,
+    reviewCount: 168,
+    weight: "250g",
+    weightOptions: ["250g", "500g", "1kg"],
+    priceByWeight: { "250g": 180, "500g": 340, "1kg": 650 },
+    inStock: true,
+    stockCount: 45,
+    tag: "Bestseller",
+    tagColor: "bg-[#831843] text-white",
+    cardBg: "bg-[#FDF2F8]",
+    accentColor: "#831843",
+    image: "/products/mens_health_mix.jpg",
+    frontLabel: "/products/mens_health_mix.jpg",
+    backLabel: "/products/mens_health_mix.jpg",
+    subtitle: "Mappillai Samba, Karuppu Kavuni, Kollu, Badam, Walnut",
+    description: "Doctor-approved traditional formulation for men's stamina, muscle recovery, and daily vitality. Stone milled with native red rice, horse gram, and rich dry fruits.",
+    ingredients: [
+      "Mappillai Samba Rice (மாப்பிள்ளை சம்பா)",
+      "Karuppu Kavuni Black Rice (கருப்பு கவுனி)",
+      "Kollu / Horse Gram (கொள்ளு)",
+      "Kichili Samba (கிச்சிலி சம்பா)",
+      "Kaattuyanam (காட்டுயானம்)",
+      "California Almonds (பாதாம்)",
+      "Cashews (முந்திரி)",
+      "Walnuts (வால்நட்)",
+      "Cardamom (ஏலக்காய்)",
+      "Dry Ginger (சுக்கு)"
+    ],
+    benefits: [
+      "Natural stamina & muscle recovery booster",
+      "Traditional Mappillai Samba strengthens physical endurance",
+      "Rich in natural plant protein and zinc",
+      "Zero white sugar, zero chemicals or preservatives"
+    ],
+    preparation: "Take 120ml water or warm milk. Add 2 tablespoons Men's Health Mix without lumps. Simmer on low flame for 3 minutes. Sweeten with palm jaggery or nattu sakkarai.",
+    nutrition: {
+      calories: "385 kcal / 100g",
+      protein: "16.8g",
+      calcium: "290mg",
+      iron: "7.2mg"
+    }
+  },
+  {
+    id: "esan-women",
+    name: "Women's Health Mix",
+    tamilName: "பெண்கள் நலம் சத்து மாவு",
+    category: "Women's Care",
+    price: 180,
+    originalPrice: 200,
+    rating: 5.0,
+    reviewCount: 215,
+    weight: "250g",
+    weightOptions: ["250g", "500g", "1kg"],
+    priceByWeight: { "250g": 180, "500g": 340, "1kg": 650 },
+    inStock: true,
+    stockCount: 50,
+    tag: "Women Special",
+    tagColor: "bg-[#15803D] text-white",
+    cardBg: "bg-[#F0FDF4]",
+    accentColor: "#15803D",
+    image: "/products/womens_health_mix.jpg",
+    frontLabel: "/products/womens_health_mix.jpg",
+    backLabel: "/products/womens_health_mix.jpg",
+    subtitle: "Poongar, Karuppu Ulundu, Pumpkin Seeds, Badam, Flax",
+    description: "Formulated for hormonal balance, PCOS care, and bone density. Blended with native Poongar traditional rice, whole black urad, and roasted seeds.",
+    ingredients: [
+      "Poongar Traditional Rice (பூங்கார்)",
+      "Karuppu Kavuni (கருப்பு கவுனி)",
+      "Whole Black Urad (கருப்பு உளுந்து)",
+      "Bamboo Rice (மூங்கில் அரிசி)",
+      "Barley (பார்லி அரிசி)",
+      "Kichili Samba (கிச்சிலி சம்பா)",
+      "Kaattuyanam (காட்டுயானம்)",
+      "Ragi & Foxtail Millet (கேழ்வரகு, தினை)",
+      "Pumpkin Seeds (பூசணி விதை)",
+      "Almonds, Pistachio & Walnut"
+    ],
+    benefits: [
+      "Balances estrogen & progesterone naturally",
+      "Strengthens spinal cord and pelvic muscles",
+      "Rich in natural iron to prevent anemia and fatigue",
+      "Traditional postpartum recovery and menstrual wellness"
+    ],
+    preparation: "Mix 2 spoons with 120ml water or milk. Cook for 3-4 minutes on low flame. Add palm jaggery / country sugar for natural sweetness.",
+    nutrition: {
+      calories: "392 kcal / 100g",
+      protein: "17.4g",
+      iron: "9.8mg",
+      calcium: "420mg"
+    }
+  },
+  {
+    id: "esan-bone",
+    name: "Bone Strong Health Mix",
+    tamilName: "எலும்பு வலுப்பெற சத்து மாவு",
+    category: "Traditional Health Mixes",
+    price: 180,
+    originalPrice: 200,
+    rating: 4.9,
+    reviewCount: 142,
+    weight: "250g",
+    weightOptions: ["250g", "500g", "1kg"],
+    priceByWeight: { "250g": 180, "500g": 340, "1kg": 650 },
+    inStock: true,
+    stockCount: 38,
+    tag: "High Calcium",
+    tagColor: "bg-[#1D4ED8] text-white",
+    cardBg: "bg-[#EFF6FF]",
+    accentColor: "#1D4ED8",
+    image: "/products/bone_strong_mix.jpg",
+    frontLabel: "/products/bone_strong_mix.jpg",
+    backLabel: "/products/bone_strong_mix_dark.jpg",
+    subtitle: "Bamboo Rice, Kuthiraivali, Black Urad, Chia, Badam",
+    description: "Packed with natural plant calcium and bone-fortifying minerals. Features native Bamboo rice, Barnyard millet, Chia seeds, and whole dry fruits.",
+    ingredients: [
+      "Kuthiraivali / Barnyard Millet (குதிரைவாலி)",
+      "Bamboo Rice (மூங்கில் அரிசி)",
+      "Barley Rice (பார்லி அரிசி)",
+      "Thinai & Saamai Millets (தினை, சாமை)",
+      "Kambu / Pearl Millet (கம்பு)",
+      "Karuppu Kavuni & Black Urad (கருப்பு உளுந்து)",
+      "Chia & Pumpkin Seeds (சியா, பூசணி விதை)",
+      "Almonds, Cashew, Pista & Walnut"
+    ],
+    benefits: [
+      "Natural calcium and magnesium for strong bones and joints",
+      "Bamboo rice relieves joint stiffness and knee aches",
+      "High fiber aids smooth gut digestion",
+      "Suitable for growing kids and elderly bone care"
+    ],
+    preparation: "Mix 2 tablespoons in 120ml hot water or milk. Stir well without lumps, simmer 3 minutes. Add palm jaggery.",
+    nutrition: {
+      calories: "375 kcal / 100g",
+      calcium: "480mg",
+      protein: "15.2g",
+      magnesium: "190mg"
+    }
+  },
+  {
+    id: "esan-sugar",
+    name: "Sugar Control Health Mix",
+    tamilName: "சர்க்கரை கட்டுப்பாடு சத்து மாவு",
+    category: "Traditional Health Mixes",
+    price: 180,
+    originalPrice: 200,
+    rating: 4.8,
+    reviewCount: 126,
+    weight: "250g",
+    weightOptions: ["250g", "500g", "1kg"],
+    priceByWeight: { "250g": 180, "500g": 340, "1kg": 650 },
+    inStock: true,
+    stockCount: 30,
+    tag: "Diabetic Care",
+    tagColor: "bg-[#C2410C] text-white",
+    cardBg: "bg-[#FFF7ED]",
+    accentColor: "#C2410C",
+    image: "/products/sugar_control_mix.jpg",
+    frontLabel: "/products/sugar_control_mix.jpg",
+    backLabel: "/products/sugar_control_mix.jpg",
+    subtitle: "Kollu, Black Urad, Barley, Fig Seeds, Chia, Millets",
+    description: "Specially formulated low-glycemic breakfast porridge. Prevents post-meal sugar spikes with horse gram, barley, black rice, and chia seeds.",
+    ingredients: [
+      "Mappillai Samba (மாப்பிள்ளை சம்பா)",
+      "Karuppu Kavuni Black Rice (கருப்பு கவுனி)",
+      "Poongar & Kaattuyanam (பூங்கார், காட்டுயானம்)",
+      "Bamboo Rice & Barley (மூங்கில் அரிசி, பார்லி)",
+      "Black Urad (கருப்பு உளுந்து)",
+      "Varagu & White Cholam (வரகு, வெள்ளை சோளம்)",
+      "Sesame & Chia Seeds (எள், சியா விதை)",
+      "Fig Seeds & Horse Gram (அத்தி விதை, கொள்ளு)",
+      "Cardamom & Dry Ginger"
+    ],
+    benefits: [
+      "Low glycemic index stabilizes blood glucose levels",
+      "Horse gram & barley curb cravings and assist weight control",
+      "High soluble fiber improves insulin sensitivity",
+      "100% natural with zero maltodextrin or sweetening agents"
+    ],
+    preparation: "Mix 2 spoons in 120ml water. Simmer for 3 minutes. Enjoy with a pinch of rock salt and fresh buttermilk.",
+    nutrition: {
+      calories: "348 kcal / 100g",
+      protein: "16.5g",
+      fiber: "14.8g",
+      glycemicIndex: "Low"
+    }
+  },
+  {
+    id: "esan-protein-powder",
+    name: "Homemade Protein Powder",
+    tamilName: "இயற்கை புரோட்டீன் பவுடர்",
+    category: "Traditional Health Mixes",
+    price: 240,
+    originalPrice: 260,
+    rating: 4.9,
+    reviewCount: 112,
+    weight: "250g",
+    weightOptions: ["250g", "500g", "1kg"],
+    priceByWeight: { "250g": 240, "500g": 460, "1kg": 890 },
+    inStock: true,
+    stockCount: 40,
+    tag: "100% Home Made",
+    tagColor: "bg-[#B45309] text-white",
+    cardBg: "bg-[#FFFBEB]",
+    accentColor: "#B45309",
+    image: "/products/protein_powder_pouch_card.jpg",
+    frontLabel: "/products/protein_powder_pouch_card.jpg",
+    backLabel: "/products/protein_powder_full.png",
+    subtitle: "Multigrain Mix, Almond, Cashew, Soy, Black Urad",
+    description: "100% natural homemade multigrain protein powder formulated without synthetic whey or chemicals. Sprouted grains and rich nuts for muscle recovery.",
+    ingredients: [
+      "California Almonds & Cashews (பாதாம், முந்திரி)",
+      "Sprouted Whole Green Moong (பாசிப்பயறு)",
+      "Roasted Whole Black Urad (கருப்பு உளுந்து)",
+      "Roasted Soybeans (சோயாபீன்ஸ்)",
+      "Mappillai Samba Rice (மாப்பிள்ளை சம்பா)",
+      "Cardamom (ஏலக்காய்)"
+    ],
+    benefits: [
+      "22g pure plant protein per 100g",
+      "Builds muscle endurance and speeds workout recovery",
+      "Easy on stomach with zero bloating",
+      "Great for fitness enthusiasts, growing kids & adults"
+    ],
+    preparation: "Mix 2 scoops (30g) in 200ml warm milk or smoothie. Stir well and drink fresh.",
+    nutrition: { calories: "410 kcal / 100g", protein: "22.4g", calcium: "280mg", iron: "6.8mg" }
+  },
+  {
+    id: "esan-murungai-podi",
+    name: "Murungai Keerai Satham Podi",
+    tamilName: "முருங்கை கீரை சாதம் பொடி",
+    category: "Herbal Soups & Podis",
+    price: 140,
+    originalPrice: 160,
+    rating: 5.0,
+    reviewCount: 94,
+    weight: "250g",
+    weightOptions: ["250g", "500g"],
+    priceByWeight: { "250g": 140, "500g": 270 },
+    inStock: true,
+    stockCount: 35,
+    tag: "Bone Strength",
+    tagColor: "bg-[#15803D] text-white",
+    cardBg: "bg-[#F0FDF4]",
+    accentColor: "#15803D",
+    image: "/products/murungai_keerai_podi_card.jpg",
+    frontLabel: "/products/murungai_keerai_podi_card.jpg",
+    backLabel: "/products/murungai_keerai_podi_full.png",
+    subtitle: "Moringa, Sprouted Millets, Sesame, Pepper, Cumin",
+    description: "Farm-fresh drumstick leaf powder blended with native millets and roasted spices. Strengthens bones and naturally elevates iron levels.",
+    ingredients: [
+      "Farm Fresh Moringa Leaves (முருங்கை கீரை)",
+      "Sprouted Pearl & Foxtail Millets (கம்பு, தினை)",
+      "Roasted White Sesame (வெள்ளை எள்)",
+      "Black Pepper & Cumin (மிளகு, சீரகம்)",
+      "Curry Leaves & Dry Ginger (கருவேப்பிலை, சுக்கு)",
+      "Rock Salt (இந்துப்பு)"
+    ],
+    benefits: [
+      "Exceptional source of plant calcium & iron",
+      "Relieves knee joint pain and strengthens bones",
+      "Natural cure for anemia & daily fatigue",
+      "Zero preservatives, hand-pounded traditional recipe"
+    ],
+    preparation: "Mix 1-2 teaspoons with hot steamed rice and cold-pressed gingelly oil or ghee.",
+    nutrition: { calories: "320 kcal / 100g", iron: "28mg", calcium: "440mg", protein: "12.5g" }
+  },
+  {
+    id: "esan-mudakathan-podi",
+    name: "Mudakathan Keerai Satham Podi",
+    tamilName: "முடக்கத்தான் கீரை சாதம் பொடி",
+    category: "Herbal Soups & Podis",
+    price: 165,
+    originalPrice: 180,
+    rating: 5.0,
+    reviewCount: 88,
+    weight: "250g",
+    weightOptions: ["250g", "500g"],
+    priceByWeight: { "250g": 165, "500g": 310 },
+    inStock: true,
+    stockCount: 30,
+    tag: "Joint Pain Relief",
+    tagColor: "bg-[#047857] text-white",
+    cardBg: "bg-[#ECFDF5]",
+    accentColor: "#047857",
+    image: "/products/mudakathan_keerai_podi_card.jpg",
+    frontLabel: "/products/mudakathan_keerai_podi_card.jpg",
+    backLabel: "/products/mudakathan_keerai_podi_full.png",
+    subtitle: "Balloon Vine Leaf, Toor Dal, Pepper, Cumin, Garlic",
+    description: "Time-honored Siddha herbal preparation for relieving joint stiffness, arthritis, and knee pain. Fresh wild mudakathan roasted with native lentils.",
+    ingredients: [
+      "Wild Mudakathan Leaves / Balloon Vine (முடக்கத்தான் கீரை)",
+      "Native Small Garlic (நாட்டுப் பூண்டு)",
+      "Black Pepper & Cumin (மிளகு, சீரகம்)",
+      "Bengal Gram & Toor Dal (கடலைப்பருப்பு, துவரம்பருப்பு)",
+      "Curry Leaves & Rock Salt (கருவேப்பிலை, இந்துப்பு)"
+    ],
+    benefits: [
+      "Traditional remedy for knee pain & rheumatoid arthritis",
+      "Flushes out excess uric acid from joint tissues",
+      "Eases morning joint stiffness and frozen shoulder",
+      "Delicious comfort food with hot rice & gingelly oil"
+    ],
+    preparation: "Mix 1 tablespoon with hot cooked rice and pure sesame oil or ghee.",
+    nutrition: { calories: "330 kcal / 100g", protein: "14.2g", fiber: "11.5g", iron: "8.4mg" }
+  },
+  {
+    id: "esan-vallarai-podi",
+    name: "Vallarai Satham Podi",
+    tamilName: "வல்லாரை சாதம் பொடி",
+    category: "Herbal Soups & Podis",
+    price: 165,
+    originalPrice: 185,
+    rating: 4.9,
+    reviewCount: 96,
+    weight: "250g",
+    weightOptions: ["250g", "500g"],
+    priceByWeight: { "250g": 165, "500g": 310 },
+    inStock: true,
+    stockCount: 28,
+    tag: "Brain & Memory",
+    tagColor: "bg-[#0D9488] text-white",
+    cardBg: "bg-[#F0FDFA]",
+    accentColor: "#0D9488",
+    image: "/products/vallarai_satham_podi_card.jpg",
+    frontLabel: "/products/vallarai_satham_podi_card.jpg",
+    backLabel: "/products/vallarai_satham_podi_full.png",
+    subtitle: "Brahmi Gotu Kola, Cashews, Black Pepper, Roasted Lentils",
+    description: "Ancient memory-enhancing botanical powder certified with FSSAI standards. Stimulates neural concentration and sharpens cognitive focus.",
+    ingredients: [
+      "Native Vallarai Leaves / Gotu Kola (வல்லாரை கீரை)",
+      "Whole Black Pepper (கருப்பு மிளகு)",
+      "Roasted Cashews (முந்திரி பருப்பு)",
+      "Cumin Seeds (சீரகம்)",
+      "Urad Dal & Chana Dal (உளுத்தம்பருப்பு, கடலைப்பருப்பு)",
+      "Dry Ginger & Rock Salt (சுக்கு, இந்துப்பு)"
+    ],
+    benefits: [
+      "Enhances memory retention & concentration for students",
+      "Calms nervous system and reduces mental exhaustion",
+      "Rich in brain-protecting antioxidants",
+      "FSSAI licensed (22425595000315) authentic home-made batch"
+    ],
+    preparation: "Enjoy 1-2 spoons with warm rice and ghee, 2 to 3 times a week.",
+    nutrition: { calories: "335 kcal / 100g", protein: "13.8g", iron: "7.6mg", magnesium: "160mg" }
+  },
+  {
+    id: "esan-pirandai-thuvaiyal",
+    name: "Pirandai Thuvaiyal Satham Podi",
+    tamilName: "பிரண்டை துவையல் சாதப்பொடி",
+    category: "Herbal Soups & Podis",
+    price: 170,
+    originalPrice: 190,
+    rating: 5.0,
+    reviewCount: 104,
+    weight: "250g",
+    weightOptions: ["250g", "500g"],
+    priceByWeight: { "250g": 170, "500g": 320 },
+    inStock: true,
+    stockCount: 32,
+    tag: "Bone Fracture Care",
+    tagColor: "bg-[#78350F] text-white",
+    cardBg: "bg-[#FEF3C7]",
+    accentColor: "#78350F",
+    image: "/products/pirandai_thuvaiyal_card.jpg",
+    frontLabel: "/products/pirandai_thuvaiyal_card.jpg",
+    backLabel: "/products/pirandai_thuvaiyal_full.png",
+    subtitle: "Adamant Creeper, Tamarind, Small Onion, Urad Dal, Pepper",
+    description: "Renowned South Indian bone-knitting herbal delicacy. Pirandai (Veldt Grape) is loaded with bio-available calcium, cures digestive sluggishness, and relieves gastritis.",
+    ingredients: [
+      "Fresh Hand-Cleaned Pirandai / Veldt Grape (பிரண்டை)",
+      "Country Tamarind & Small Onion (நாட்டு புளி, சின்ன வெங்காயம்)",
+      "Split Black Urad Dal (கருப்பு உளுந்து)",
+      "Dry Red Pepper & Mustard (காய்ந்த மிளகாய், கடுகு)",
+      "Cold-Pressed Gingelly Oil (மரச்செக்கு நல்லெண்ணெய்)",
+      "Asafoetida & Sea Salt (பெருங்காயம், கல் உப்பு)"
+    ],
+    benefits: [
+      "Accelerates bone density growth & heals micro-fractures",
+      "Cures severe bloating, flatulence and chronic indigestion",
+      "Stimulates appetite for kids and recovering elders",
+      "Prepared in cold-pressed sesame oil with FSSAI certification"
+    ],
+    preparation: "Mix with hot steamed rice and a spoonful of sesame oil or ghee.",
+    nutrition: { calories: "340 kcal / 100g", calcium: "510mg", protein: "11.8g", fiber: "13.2g" }
+  },
+  {
+    id: "esan-pirandai-satham-podi",
+    name: "Pirandai Satham Podi (with Free Idli Podi)",
+    tamilName: "பிரண்டை சாதம் பொடி (கூடுதல் இட்லி பொடி)",
+    category: "Herbal Soups & Podis",
+    price: 245,
+    originalPrice: 280,
+    rating: 5.0,
+    reviewCount: 128,
+    weight: "250g",
+    weightOptions: ["250g", "500g"],
+    priceByWeight: { "250g": 245, "500g": 470 },
+    inStock: true,
+    stockCount: 42,
+    tag: "Special Combo",
+    tagColor: "bg-[#9A3412] text-white",
+    cardBg: "bg-[#FFF7ED]",
+    accentColor: "#9A3412",
+    image: "/products/pirandai_satham_podi_card.jpg",
+    frontLabel: "/products/pirandai_satham_podi_card.jpg",
+    backLabel: "/products/pirandai_satham_podi_back.jpg",
+    subtitle: "Spicy & Healthy Food Mix • Free Pirandai Idli Podi Inside",
+    description: "Special bumper combo: Pure Pirandai Rice Powder accompanied by a bonus pack of Pirandai Idli Podi! Handcrafted with wild Veldt grape, curry leaves, pepper, cumin, and cashews.",
+    ingredients: [
+      "Wild Pirandai / Veldt Grape (பிரண்டை)",
+      "Curry Leaves (கருவேப்பிலை)",
+      "Whole Black Pepper & Cumin (கருப்பு மிளகு, சீரகம்)",
+      "Roasted Cashews & Peanuts (முந்திரி, நிலக்கடலை)",
+      "Split Black Urad Dal & Bengal Gram (கருப்பு உளுந்து, கடலைப்பருப்பு)",
+      "Dry Red Chillies & Garlic (வரமிளகாய், நாட்டு பூண்டு)",
+      "Asafoetida & Rock Salt (பெருங்காயம், இந்துப்பு)"
+    ],
+    benefits: [
+      "Natural bone-strengthener and bio-available calcium booster",
+      "Relieves acidity, gastritis, and chronic joint aches",
+      "Strengthens gut digestion and eliminates bloating",
+      "Comes with extra Pirandai Idli Podi for idli, dosa & uthappam"
+    ],
+    preparation: "Mix 1-2 spoons with hot steamed rice and cold-pressed gingelly oil or ghee. For idli/dosa, mix with sesame oil.",
+    nutrition: {
+      calories: "345 kcal / 100g",
+      calcium: "520mg",
+      protein: "12.6g",
+      iron: "8.1mg"
+    }
+  }
+];
+
+export const categories = [
+  {
+    id: "all",
+    name: "All Products",
+    count: 10,
+    icon: "Sparkles",
+    bg: "bg-[#FAF7F0]",
+    borderColor: "border-[#E7E2D6]"
+  },
+  {
+    id: "Traditional Health Mixes",
+    name: "Health Mixes",
+    count: 4,
+    description: "Men's, Bone Strong, Sugar Control & Homemade Protein",
+    image: "/products/mens_health_mix.jpg",
+    bg: "bg-[#EBF7EE]",
+    borderColor: "border-[#C8E6C9]",
+    badgeColor: "bg-[#1E4D2B] text-white"
+  },
+  {
+    id: "Herbal Soups & Podis",
+    name: "Herbal Podis & Soups",
+    count: 5,
+    description: "Murungai, Mudakathan, Vallarai & Pirandai Combos",
+    image: "/products/pirandai_satham_podi_card.jpg",
+    bg: "bg-[#F2EEFA]",
+    borderColor: "border-[#D1C4E9]",
+    badgeColor: "bg-[#5B21B6] text-white"
+  },
+  {
+    id: "Women's Care",
+    name: "Women's Care",
+    count: 1,
+    description: "Hormonal Balance & Bone Density",
+    image: "/products/womens_health_mix.jpg",
+    bg: "bg-[#FDF1ED]",
+    borderColor: "border-[#FFCCBC]",
+    badgeColor: "bg-[#BE185D] text-white"
+  }
+];
+
+export const initialOrders = [
+  {
+    id: "ORD-94821",
+    customerName: "Kavitha Rajagopal",
+    phone: "9842157890",
+    email: "kavitha.r@gmail.com",
+    address: "14/2, Bharathi Nagar 2nd Street, Ramanathapuram, Coimbatore - 641045",
+    items: [
+      { name: "Men's Health Mix", weight: "250g", quantity: 2, price: 180 },
+      { name: "Women's Health Mix", weight: "250g", quantity: 1, price: 180 }
+    ],
+    total: 540,
+    paymentMethod: "UPI / PhonePe",
+    orderType: "Website Order",
+    status: "Delivered",
+    date: "2026-10-20 14:32",
+    trackingId: "IND-POST-992384"
+  },
+  {
+    id: "ORD-94822",
+    customerName: "Praveen Senthil",
+    phone: "9790451234",
+    email: "praveen.s@gmail.com",
+    address: "Plot 45, Anna Salai, Madurai - 625020",
+    items: [
+      { name: "Bone Strong Health Mix", weight: "250g", quantity: 2, price: 180 },
+      { name: "Pirandai Satham Podi", weight: "250g", quantity: 1, price: 245 }
+    ],
+    total: 605,
+    paymentMethod: "Cash on Delivery",
+    orderType: "WhatsApp Order",
+    status: "Shipped",
+    date: "2026-10-21 09:15",
+    trackingId: "ST-EXPRESS-110293"
+  }
+];
+
+export const customerReviews = [
+  {
+    name: "Karthik Subramanian",
+    location: "Thoothukudi",
+    rating: 5,
+    text: "Men's Health Mix has become my morning energy drink before workout. The aroma of roasted Mappillai Samba and Karuppu Kavuni is unmatched!",
+    product: "Men's Health Mix 250g",
+    date: "Verified Buyer"
+  },
+  {
+    name: "Dr. Deepa Natarajan",
+    location: "Chennai",
+    rating: 5,
+    text: "Ordered the Women's Health Mix. Natural Poongar rice and black urad blend without any white sugar or maltodextrin. Truly authentic.",
+    product: "Women's Health Mix 250g",
+    date: "Verified Buyer"
+  },
+  {
+    name: "Ramesh Kannan",
+    location: "Madurai",
+    rating: 5,
+    text: "Sugar Control Health Mix helps maintain fasting glucose levels without any spike. Delivery via WhatsApp was fast within 2 days.",
+    product: "Sugar Control Health Mix 250g",
+    date: "Verified Buyer"
+  },
+  {
+    name: "Meenakshi Sundaram",
+    location: "Tirunelveli",
+    rating: 5,
+    text: "The Pirandai Satham Podi combo with the free Idli podi is wonderful! Joint pain in my knees has reduced significantly after 2 weeks of lunch rice.",
+    product: "Pirandai Satham Podi 250g",
+    date: "Verified Buyer"
+  }
+];
