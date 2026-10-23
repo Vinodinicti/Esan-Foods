@@ -37,7 +37,7 @@ export default function ProductCard({ product, onAddToCart, onQuickView }) {
           className="relative w-full aspect-square rounded-lg sm:rounded-2xl bg-[#FAF7EE] flex items-center justify-center p-0 mb-2 sm:mb-3 cursor-pointer transition-all overflow-hidden border border-[#E8E2D5] shadow-xs group-hover:shadow-md shrink-0"
         >
           {/* Floating Category / Bestseller Badge in GolGappa Reference Style */}
-          <span className="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 z-10 text-[8px] sm:text-[10px] font-black uppercase tracking-wider px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full shadow-xs bg-[#183B25] text-[#FABD44] border border-[#FABD44]/30">
+          <span className="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 z-10 text-[8px] sm:text-[10px] font-black uppercase tracking-wider px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full shadow-xs bg-[#183B25] text-[#FABD44] border border-[#FABD44]/30 max-w-[70%] truncate">
             ★ {product.tag || 'Traditional'}
           </span>
 
@@ -167,13 +167,13 @@ export default function ProductCard({ product, onAddToCart, onQuickView }) {
           )}
         </div>
 
-        {/* Buttons Grid - Strictly Aligned Across All Cards */}
-        <div className="grid grid-cols-12 gap-1 sm:gap-2">
+        {/* Buttons - Strictly Aligned & Zero Overlap */}
+        <div className="flex items-center gap-1.5 sm:gap-2">
           {/* Main Add to Cart Button */}
           <button
             onClick={handleAddToCart}
             disabled={isOutOfStock}
-            className={`col-span-8 h-8 sm:h-9.5 px-1 sm:px-2 rounded-lg sm:rounded-xl text-[11px] sm:text-xs font-bold transition-all duration-200 flex items-center justify-center gap-1 sm:gap-1.5 shadow-sm ${
+            className={`flex-1 h-8 sm:h-9.5 px-2 rounded-lg sm:rounded-xl text-[11px] sm:text-xs font-bold transition-all duration-200 flex items-center justify-center gap-1 sm:gap-1.5 shadow-sm ${
               isOutOfStock
                 ? 'bg-gray-100 text-gray-400 border border-gray-200 cursor-not-allowed'
                 : isAdded 
@@ -197,16 +197,16 @@ export default function ProductCard({ product, onAddToCart, onQuickView }) {
             )}
           </button>
 
-          {/* Quick WhatsApp Order Button */}
+          {/* Quick WhatsApp Order Button - Square Icon Button to Prevent Text Crushing */}
           <a
             href={getProductWhatsAppUrl(product, selectedWeight)}
             target="_blank"
             rel="noopener noreferrer"
-            className="col-span-4 h-8 sm:h-9.5 px-1 sm:px-2 rounded-lg sm:rounded-xl text-[11px] sm:text-xs font-bold bg-[#FABD44]/25 hover:bg-[#FABD44] text-[#183B25] border border-[#FABD44]/60 transition-all duration-200 flex items-center justify-center gap-1 active:scale-95 text-center shadow-2xs"
+            className="w-8 h-8 sm:w-9.5 sm:h-9.5 rounded-lg sm:rounded-xl bg-[#FABD44]/25 hover:bg-[#FABD44] text-[#183B25] border border-[#FABD44]/60 transition-all duration-200 flex items-center justify-center active:scale-95 text-center shadow-2xs shrink-0"
             title="Order instantly on WhatsApp"
+            aria-label="Order on WhatsApp"
           >
-            <Phone size={11} className="fill-current" />
-            <span>Chat</span>
+            <Phone size={13} className="fill-current" />
           </a>
         </div>
       </div>

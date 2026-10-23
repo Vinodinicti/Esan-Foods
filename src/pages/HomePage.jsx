@@ -460,8 +460,8 @@ export default function HomePage({
                   </div>
 
                   {/* Bottom Price & Button Row */}
-                  <div className="flex items-center justify-between pt-2 border-t border-[#F0EBE0] mt-1">
-                    <span className="font-serif text-base sm:text-lg font-extrabold text-[#183B25]">
+                  <div className="flex items-center justify-between pt-2 border-t border-[#F0EBE0] mt-1 gap-1">
+                    <span className="font-serif text-sm sm:text-lg font-extrabold text-[#183B25] shrink-0">
                       ₹{product.price}
                     </span>
 
@@ -474,7 +474,7 @@ export default function HomePage({
                           setAddedPodiId(product.id);
                           setTimeout(() => setAddedPodiId(null), 1500);
                         }}
-                        className={`px-3 py-1.5 rounded-lg font-bold text-[11px] flex items-center gap-1 transition-all shadow-2xs active:scale-95 cursor-pointer ${
+                        className={`px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg font-bold text-[10px] sm:text-[11px] flex items-center gap-1 transition-all shadow-2xs active:scale-95 cursor-pointer shrink-0 ${
                           isAdded
                             ? 'bg-[#183B25] text-[#FABD44]'
                             : 'bg-[#BA8C59] hover:bg-[#A87B49] text-white'
@@ -482,13 +482,14 @@ export default function HomePage({
                       >
                         {isAdded ? (
                           <>
-                            <Check size={12} className="stroke-[3]" />
-                            <span>Added!</span>
+                            <Check size={11} className="stroke-[3]" />
+                            <span>Added</span>
                           </>
                         ) : (
                           <>
-                            <ShoppingBag size={12} />
-                            <span>Add to Cart</span>
+                            <ShoppingBag size={11} />
+                            <span className="sm:hidden">Add</span>
+                            <span className="hidden sm:inline">Add to Cart</span>
                           </>
                         )}
                       </button>
@@ -501,7 +502,7 @@ export default function HomePage({
                           setAddedPodiId(product.id);
                           setTimeout(() => setAddedPodiId(null), 1500);
                         }}
-                        className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#FAF7EE] hover:bg-[#BA8C59] hover:text-white text-[#BA8C59] border border-[#E8E2D5] flex items-center justify-center transition-all active:scale-90 shadow-2xs cursor-pointer"
+                        className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#FAF7EE] hover:bg-[#BA8C59] hover:text-white text-[#BA8C59] border border-[#E8E2D5] flex items-center justify-center transition-all active:scale-90 shadow-2xs cursor-pointer shrink-0"
                         title="Add to Cart"
                       >
                         <ShoppingBag size={13} />
